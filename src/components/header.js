@@ -1,42 +1,77 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { Component } from "react"
+import AppBar from "@material-ui/core/AppBar"
+import Toolbar from "@material-ui/core/Toolbar"
+import MenuIcon from "@material-ui/icons/Menu"
+import IconButton from "@material-ui/core/IconButton"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#0072BB`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+class Header extends Component {
+  state = {
+    headerShow: false,
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      this.setState({
+        headerShow: true,
+      })
+    } else {
+      this.setState({
+        headerShow: false,
+      })
+    }
+  }
+  toggleDrawer = value => {
+    this.setState({
+      headerShow: false,
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <AppBar
+          position="block"
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            backgroundColor: this.state.headerShow ? "#2f2f2f" : "#2f2f2f",
+            boxShadow: "none",
+            padding: "10px 0px",
           }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+          <Toolbar>
+            <div className="header_logo">
+              <div className="font_righteous header_logo_venue"> Rob Henderson</div>
+              {/* <div className="header_logo_title"> sfsdfsd</div> */}
+            </div>
+            
+          <div className="header_right_container">
+            <span> <Link className="header_link" to="#Summary"> Summary</Link> </span>
+            <span> <Link className="header_link" to="#Skills"> Skills</Link> </span>
+            <span> <Link className="header_link" to="#Summary"> Contact Me</Link> </span>
+            <span> <a className="header_link" href="https://medium.com/@kickitandcode"> Blog </a> </span>
+          
+          </div>
+            {/* <IconButton
+              aria-label="Menu"
+              color="inherit"
+              onClick={() => this.toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton> */}
+            {/* <SideDrawer
+                  open={this.state.drawerOpen}
+                  onClose={(value) => this.toggleDrawer(value)}
+              /> */}
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
+  }
 }
 
 export default Header

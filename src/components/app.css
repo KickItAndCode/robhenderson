@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto:300,400,500');
+
+/*====================
+        HEADER
+======================*/
+
+header {
+  padding: 10px 0px;
+  transition: all 300ms ease-in;
+}
+
+header .header_logo {
+  flex-grow: 1;
+}
+
+header .header_logo_venue {
+  font-size: 30px;
+  font-family: 'Righteous';
+}
+
+
+.header_right_container {
+    font-family: 'Roboto';
+    font-weight: 300;
+    text-transform: uppercase;
+    
+}
+
+.header_link{
+    margin-right: 20px
+}
+.header_link:hover{
+    color: tomato
+}
+
+/*====================
+        FOOTER
+======================*/
+
+footer {
+  text-align: left;
+  font-size: 16px;
+  color: black ;
+  padding: 30px 0px;
+  background-color: white;
+
+}
+
+footer .footer_nav {
+text-align: right;
+
+}
+footer .footer_link {
+    text-align: left;
+    width: 300px;
+    position: absolute;
+    padding-left: 30px;
+}
+
+footer .img_cover {
+  margin: 0 auto;
+}
+
+footer .footer_discl {
+  margin: 10px 0px;
+}
+
+/* footer {
+  padding: 50px 0px;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: tomato;
+  color: white;
+  font-size: 40px;
+}
+
+footer .footer_copyright {
+  font-size: 18px;
+} */
+
+.app {
+  height: "1500px";
+
+}
+
+.skills_wrapper {
+  height: 700px;
+  overflow: hidden;
+
+  width: 900px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  background: #fafafa;
+  border: 1px solid #e9e9e9;
+  font-size: 17px;
+  padding: 8px;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-weight: 300;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  font-size: 16px;
+  height: 38px;
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  width: 100%;
+}
+
+button {
+  background: #0d1831;
+  color: #ffffff;
+  border: 1px solid #0d1831;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.error_label {
+  color: #f44336;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.success_label {
+  color: #98c5e9;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.label_inputs {
+  font-size: 20px;
+  margin: 10px 0px;
+  font-weight: 300;
+  background: #e5f4ff;
+  padding: 10px;
+  display: inline-block;
+}
+
+.split_fields {
+  margin: 30px 0px;
+  padding: 20px 0px;
+  border-top: 2px solid #dddddd;
+}
+
+.split_fields.last {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #cecece;
+  text-align: center;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #cecece;
+  text-align: center;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #cecece;
+  text-align: center;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #cecece;
+  text-align: center;
+}
+
+/* Contact Me */
+
+.submit_button {
+  color: white;
+  background-color: tomato;
+  border-color: tomato;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.contactme_container {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  width: 100%;
+}
+.contactme_wrapper {
+  
+  padding: 20px;
+  min-height: 40vh;
+  text-align: center;
+}
+
+.contactme_wrapper form {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.aboutme_container {
+    width: 100%;
+    text-align: center;
+}
+
+.aboutme_image {
+    background-image: url('../images/andrew-ruiz-118217-unsplash.jpg');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.aboutme_header_large {
+    font-size: 50px;
+    margin-bottom: 35px;
+    padding: 120px;
+}
+
+.aboutme_header {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.aboutme_button{
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+.aboutme_subheading {
+    font-size: 16px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 75px;
+}
+
+.img-circle{
+    border-radius: 50%;
+}
